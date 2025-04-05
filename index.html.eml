@@ -1,0 +1,229 @@
+Delivered-To: kit27.eee044@gmail.com
+Received: by 2002:a05:6a10:bb28:b0:5ec:dc2a:24d6 with SMTP id hc40csp5298250pxb;
+        Fri, 4 Apr 2025 23:20:13 -0700 (PDT)
+X-Received: by 2002:a17:907:94c1:b0:ac7:2f8b:6844 with SMTP id a640c23a62f3a-ac7d6d075bfmr362414066b.23.1743834013182;
+        Fri, 04 Apr 2025 23:20:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1743834013; cv=none;
+        d=google.com; s=arc-20240605;
+        b=KBnyozxpsiAImgXGFFSLDk0u9rolh4NZ9BzcXCr36hk2af33oR2UmDbqsvGKYLxVyD
+         VIp5zUF1wcXEPdcMINB6Gu2aeJAA3xYxICBcQ4mn3XOr+gLsjKOS4/Hh6imvDqQePaw1
+         BYkLtOM9TVcx29wNDHXLIqr5ed4C5llgU89TIQfOAlB78OsWW7JeYnP1vKqjkKTkye5V
+         4x48Apyt3glKy04Y2NxmAACP7nuz0Vh08GWBpxR8F0oxLk0F5RBJKCFWwb3Tq4EV4sCo
+         ZbomsRaDLMnFEUhzcVW2hyg+U+GRPceZrWobafA5PqRq6CfPBgNk5fS1NBl/WvgXwmRB
+         HwlQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=1jeCecyovOxrwBmJmQB/Wo+3YjhiVFzcDiLyqKVb1Gg=;
+        fh=8DeslNCDQmUDlNhLDhv2GL8XWDLTS5Xnz+Y4LFZE+oo=;
+        b=KRo26Kuvy8aJR2TLLaVWFJ+gDRciqdl5BLhSqVDCgSiWdlg8KhL9RygYFhwnUHuBKe
+         REYf+YdwF3OFP25FoLm4v8H9xNHKSKgv5QVM9xXuYxUOLZZ9c4AuqnSBZvtpbuFMOFF0
+         sxiSoPrfUt5/2/93xidZ1UVCoiQuK8XHK7cgw9My8m8mJgsLXKbKFQl25WiNAFVnsvpK
+         3XOC7YPCWwBQvhX5Hg1fb0Yv2h/o/eNFMPLRBl5pNt0ACxJpfVX20zoN5OiNzD0QurnM
+         x7aXJj2VPO4OfcnyRP35HOPyQZCD9aXHIlFQow+0cvlvi4yFUX1y4Y6lY9EEw+bDV/+N
+         CL0Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KyEtF47F;
+       spf=pass (google.com: domain of karthieswaranm3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=karthieswaranm3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <karthieswaranm3@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ac7c0886616sor317207366b.4.2025.04.04.23.20.12
+        for <kit27.eee044@gmail.com>
+        (Google Transport Security);
+        Fri, 04 Apr 2025 23:20:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of karthieswaranm3@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KyEtF47F;
+       spf=pass (google.com: domain of karthieswaranm3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=karthieswaranm3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1743834012; x=1744438812; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=1jeCecyovOxrwBmJmQB/Wo+3YjhiVFzcDiLyqKVb1Gg=;
+        b=KyEtF47FGAtCo6eGEaoKJ4kR+st8dNwdDOt9yhm8iT9F11t3jCPRbu7kiywQp31SGu
+         81A9vqHYbbSog2jx8ShebOY/nDDB44OPc8XKzo27BJX9K7iqbM0zz8VDO5d9h9K0AxTz
+         g+FQsHIvNhOZlfxQbF+0TfA+m/v5QFn0ovhLC2ktrCrPKrdzqxYEHqLtpgKVaj+JJwWx
+         6iLb//8USA8PsbaF83+mtH/l9CdwWzY2X8vw2Ubet0oEIQs+kiNLlHedP+3V3KeGJ0+s
+         mCkBW9E/nzoapIDtyHXXGxJ9oJnNs9LO2X4X8lqlsMsM92V4c7VdsVXeoj3lCN5M2Z9C
+         BYZA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1743834012; x=1744438812;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=1jeCecyovOxrwBmJmQB/Wo+3YjhiVFzcDiLyqKVb1Gg=;
+        b=HzCCx56dWtblrRxrQxiZy8Yb8Glb0EqbTOnVUJAt+yvMhpF4OO6vrjkjliF0kTtD1e
+         TSwyKi3My+h1g21aLYDrLEMQ89ugiCo3xJKHJgSSBY2liknN8RK/dHCPwlgJlZNtPe6C
+         74UBDmQwvaclLO1HDzuoBSBCkabzoSWhjqX2UDY/voLILRgonY3Ep9abX9gPyGmTKOne
+         d/+Av+52/Y8oYcbPJFBm47EzgRQYi7VY7NLie6MqRSYRxSllEo7U0c+2jIBoIKGKYo6C
+         Chir83ppbB79jpv/E5KYcUXfGxFX7GOyA4r3ErZHppJ9kUXlLMOg2fuIr8dVw3NNXkVW
+         +xyQ==
+X-Gm-Message-State: AOJu0YzE55K0Vfe9wD4a2eoGTEerZQjYgUN71afr9dn0NId8qbVCftwP
+	4ETvIzOh8P7YCBe0MshJPWTXgzjlrz/TQwLM7GHFJz4yGzZpjnmyPhb8ud8ilWJtSx0r3HI7ZMU
+	wlWfj/x2wEWWfBS5MfGg6P1bUZ692vHjlb/M=
+X-Gm-Gg: ASbGncvo103CXs01MgKREJdMxobb01+8omjgMq8ANXFf725RaggWkBBE8w1J2Md9ZYt
+	x5MIf6bukNBYyJe0a6WJdDZoPJKl9TDqZsL+Xu5lN77B+tsjxCDqEiXjPR7lEIsbtuuEAKyYWIW
+	lVqOvkUHT2SSg7naZs3wiCpQYMeT2pyVF7Li/ZJio=
+X-Google-Smtp-Source: AGHT+IFWpB0WmW59hcffnpoZW/M6BiBnqLYYH9l6xS6bHJGz8UpwicRRwwx5mbmcRnniU0bQydclrQnL44DGF579VnM=
+X-Received: by 2002:a17:907:9813:b0:ac2:af42:4719 with SMTP id
+ a640c23a62f3a-ac7d6d05fc4mr419721766b.21.1743834011830; Fri, 04 Apr 2025
+ 23:20:11 -0700 (PDT)
+MIME-Version: 1.0
+From: "M. Karthieswaran" <karthieswaranm3@gmail.com>
+Date: Sat, 5 Apr 2025 11:49:58 +0530
+X-Gm-Features: ATxdqUFUVNOsvweoqEFBZHTCOLkmZF_mKjuEe1agmYr2PTa2BDY5XNuKX_1tjG8
+Message-ID: <CAC18yhdA0wn9X5QthhZDiwC_Ui5JMUKMwyaCMTkgzFibaDmFtQ@mail.gmail.com>
+Subject: index.html
+To: kit27.eee044@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000d28faa063201fefa"
+
+--000000000000d28faa063201fefa
+Content-Type: text/plain; charset="UTF-8"
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Search Engine</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Visual Search Engine</h1>
+
+        <!-- Text Search Section -->
+        <div>
+            <input id="textSearch" type="text" placeholder="Search for
+images...">
+            <button onclick="searchByText()">Search</button>
+        </div>
+
+        <!-- Image Search Section -->
+        <div>
+            <input id="imageUpload" type="file" accept="image/*" onchange="
+searchByImage(event)">
+        </div>
+
+        <!-- Display Section -->
+        <div id="results"></div>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
+
+--000000000000d28faa063201fefa
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div style=3D"color:rgb(204,204,204);background-color:rgb(=
+31,31,31);font-family:Consolas,&quot;Courier New&quot;,monospace;font-size:=
+14px;line-height:19px;white-space:pre"><div><span style=3D"color:rgb(128,12=
+8,128)">&lt;!</span><span style=3D"color:rgb(86,156,214)">DOCTYPE</span> <s=
+pan style=3D"color:rgb(156,220,254)">html</span><span style=3D"color:rgb(12=
+8,128,128)">&gt;</span></div><div><span style=3D"color:rgb(128,128,128)">&l=
+t;</span><span style=3D"color:rgb(86,156,214)">html</span> <span style=3D"c=
+olor:rgb(156,220,254)">lang</span>=3D<span style=3D"color:rgb(206,145,120)"=
+>&quot;en&quot;</span><span style=3D"color:rgb(128,128,128)">&gt;</span></d=
+iv><div><span style=3D"color:rgb(128,128,128)">&lt;</span><span style=3D"co=
+lor:rgb(86,156,214)">head</span><span style=3D"color:rgb(128,128,128)">&gt;=
+</span></div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(128,128,128)">&lt;=
+</span><span style=3D"color:rgb(86,156,214)">meta</span> <span style=3D"col=
+or:rgb(156,220,254)">charset</span>=3D<span style=3D"color:rgb(206,145,120)=
+">&quot;UTF-8&quot;</span><span style=3D"color:rgb(128,128,128)">&gt;</span=
+></div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(128,128,128)">&lt;</span=
+><span style=3D"color:rgb(86,156,214)">meta</span> <span style=3D"color:rgb=
+(156,220,254)">name</span>=3D<span style=3D"color:rgb(206,145,120)">&quot;v=
+iewport&quot;</span> <span style=3D"color:rgb(156,220,254)">content</span>=
+=3D<span style=3D"color:rgb(206,145,120)">&quot;width=3Ddevice-width, initi=
+al-scale=3D1.0&quot;</span><span style=3D"color:rgb(128,128,128)">&gt;</spa=
+n></div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(128,128,128)">&lt;</spa=
+n><span style=3D"color:rgb(86,156,214)">title</span><span style=3D"color:rg=
+b(128,128,128)">&gt;</span>Visual Search Engine<span style=3D"color:rgb(128=
+,128,128)">&lt;/</span><span style=3D"color:rgb(86,156,214)">title</span><s=
+pan style=3D"color:rgb(128,128,128)">&gt;</span></div><div>=C2=A0 =C2=A0 <s=
+pan style=3D"color:rgb(128,128,128)">&lt;</span><span style=3D"color:rgb(86=
+,156,214)">link</span> <span style=3D"color:rgb(156,220,254)">rel</span>=3D=
+<span style=3D"color:rgb(206,145,120)">&quot;stylesheet&quot;</span> <span =
+style=3D"color:rgb(156,220,254)">href</span>=3D<span style=3D"color:rgb(206=
+,145,120)">&quot;styles/styles.css&quot;</span><span style=3D"color:rgb(128=
+,128,128)">&gt;</span></div><div><span style=3D"color:rgb(128,128,128)">&lt=
+;/</span><span style=3D"color:rgb(86,156,214)">head</span><span style=3D"co=
+lor:rgb(128,128,128)">&gt;</span></div><div><span style=3D"color:rgb(128,12=
+8,128)">&lt;</span><span style=3D"color:rgb(86,156,214)">body</span><span s=
+tyle=3D"color:rgb(128,128,128)">&gt;</span></div><div>=C2=A0 =C2=A0 <span s=
+tyle=3D"color:rgb(128,128,128)">&lt;</span><span style=3D"color:rgb(86,156,=
+214)">div</span> <span style=3D"color:rgb(156,220,254)">id</span>=3D<span s=
+tyle=3D"color:rgb(206,145,120)">&quot;app&quot;</span><span style=3D"color:=
+rgb(128,128,128)">&gt;</span></div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <span s=
+tyle=3D"color:rgb(128,128,128)">&lt;</span><span style=3D"color:rgb(86,156,=
+214)">h1</span><span style=3D"color:rgb(128,128,128)">&gt;</span>Visual Sea=
+rch Engine<span style=3D"color:rgb(128,128,128)">&lt;/</span><span style=3D=
+"color:rgb(86,156,214)">h1</span><span style=3D"color:rgb(128,128,128)">&gt=
+;</span></div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 </div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <span style=3D"color:rgb(106,153,85)">&lt;!-- Text Search Sectio=
+n --&gt;</span></div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:=
+rgb(128,128,128)">&lt;</span><span style=3D"color:rgb(86,156,214)">div</spa=
+n><span style=3D"color:rgb(128,128,128)">&gt;</span></div><div>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(128,128,128)">&lt;=
+</span><span style=3D"color:rgb(86,156,214)">input</span> <span style=3D"co=
+lor:rgb(156,220,254)">id</span>=3D<span style=3D"color:rgb(206,145,120)">&q=
+uot;textSearch&quot;</span> <span style=3D"color:rgb(156,220,254)">type</sp=
+an>=3D<span style=3D"color:rgb(206,145,120)">&quot;text&quot;</span> <span =
+style=3D"color:rgb(156,220,254)">placeholder</span>=3D<span style=3D"color:=
+rgb(206,145,120)">&quot;Search for images...&quot;</span><span style=3D"col=
+or:rgb(128,128,128)">&gt;</span></div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <span style=3D"color:rgb(128,128,128)">&lt;</span><span style=3D=
+"color:rgb(86,156,214)">button</span> <span style=3D"color:rgb(156,220,254)=
+">onclick</span>=3D<span style=3D"color:rgb(206,145,120)">&quot;</span><spa=
+n style=3D"color:rgb(220,220,170)">searchByText</span><span style=3D"color:=
+rgb(206,145,120)">()&quot;</span><span style=3D"color:rgb(128,128,128)">&gt=
+;</span>Search<span style=3D"color:rgb(128,128,128)">&lt;/</span><span styl=
+e=3D"color:rgb(86,156,214)">button</span><span style=3D"color:rgb(128,128,1=
+28)">&gt;</span></div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color=
+:rgb(128,128,128)">&lt;/</span><span style=3D"color:rgb(86,156,214)">div</s=
+pan><span style=3D"color:rgb(128,128,128)">&gt;</span></div><br><div>=C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(106,153,85)">&lt;!-- Image S=
+earch Section --&gt;</span></div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <span sty=
+le=3D"color:rgb(128,128,128)">&lt;</span><span style=3D"color:rgb(86,156,21=
+4)">div</span><span style=3D"color:rgb(128,128,128)">&gt;</span></div><div>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(128,128,=
+128)">&lt;</span><span style=3D"color:rgb(86,156,214)">input</span> <span s=
+tyle=3D"color:rgb(156,220,254)">id</span>=3D<span style=3D"color:rgb(206,14=
+5,120)">&quot;imageUpload&quot;</span> <span style=3D"color:rgb(156,220,254=
+)">type</span>=3D<span style=3D"color:rgb(206,145,120)">&quot;file&quot;</s=
+pan> <span style=3D"color:rgb(156,220,254)">accept</span>=3D<span style=3D"=
+color:rgb(206,145,120)">&quot;image/*&quot;</span> <span style=3D"color:rgb=
+(156,220,254)">onchange</span>=3D<span style=3D"color:rgb(206,145,120)">&qu=
+ot;</span><span style=3D"color:rgb(220,220,170)">searchByImage</span><span =
+style=3D"color:rgb(206,145,120)">(</span><span style=3D"color:rgb(156,220,2=
+54)">event</span><span style=3D"color:rgb(206,145,120)">)&quot;</span><span=
+ style=3D"color:rgb(128,128,128)">&gt;</span></div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <span style=3D"color:rgb(128,128,128)">&lt;/</span><span style=
+=3D"color:rgb(86,156,214)">div</span><span style=3D"color:rgb(128,128,128)"=
+>&gt;</span></div><br><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color=
+:rgb(106,153,85)">&lt;!-- Display Section --&gt;</span></div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(128,128,128)">&lt;</span><spa=
+n style=3D"color:rgb(86,156,214)">div</span> <span style=3D"color:rgb(156,2=
+20,254)">id</span>=3D<span style=3D"color:rgb(206,145,120)">&quot;results&q=
+uot;</span><span style=3D"color:rgb(128,128,128)">&gt;&lt;/</span><span sty=
+le=3D"color:rgb(86,156,214)">div</span><span style=3D"color:rgb(128,128,128=
+)">&gt;</span></div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(128,128,128=
+)">&lt;/</span><span style=3D"color:rgb(86,156,214)">div</span><span style=
+=3D"color:rgb(128,128,128)">&gt;</span></div><div>=C2=A0 =C2=A0 <span style=
+=3D"color:rgb(128,128,128)">&lt;</span><span style=3D"color:rgb(86,156,214)=
+">script</span><span style=3D"color:rgb(212,212,212)"> </span><span style=
+=3D"color:rgb(156,220,254)">src</span><span style=3D"color:rgb(212,212,212)=
+">=3D</span><span style=3D"color:rgb(206,145,120)">&quot;scripts/app.js&quo=
+t;</span><span style=3D"color:rgb(128,128,128)">&gt;&lt;/</span><span style=
+=3D"color:rgb(86,156,214)">script</span><span style=3D"color:rgb(128,128,12=
+8)">&gt;</span></div><div><span style=3D"color:rgb(128,128,128)">&lt;/</spa=
+n><span style=3D"color:rgb(86,156,214)">body</span><span style=3D"color:rgb=
+(128,128,128)">&gt;</span></div><div><span style=3D"color:rgb(128,128,128)"=
+>&lt;/</span><span style=3D"color:rgb(86,156,214)">html</span><span style=
+=3D"color:rgb(128,128,128)">&gt;</span></div></div></div>
+
+--000000000000d28faa063201fefa--

@@ -1,0 +1,183 @@
+Delivered-To: kit27.eee044@gmail.com
+Received: by 2002:a05:6a10:bb28:b0:5ec:dc2a:24d6 with SMTP id hc40csp5298790pxb;
+        Fri, 4 Apr 2025 23:22:08 -0700 (PDT)
+X-Received: by 2002:a05:6402:34d4:b0:5e7:f707:d7c4 with SMTP id 4fb4d7f45d1cf-5f0b66315b8mr4372222a12.31.1743834128529;
+        Fri, 04 Apr 2025 23:22:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1743834128; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NP9pWED4/3Wgm3F9lIQJph4clm2bxhj9HNfgSwRYFGOmOVYeE+pMj2OPBre4G987sK
+         7jekwzMALAf+atAvdyV5/GAWHBArDZmNOcEY1AsckSX9X1qcQ34p1sdQRPa3ap4q604F
+         Rebkq2KsJmRWoRQXdkUZgOeZGK7+H2i3DEsaTnuNJi14MVGxlvd+zRBApAG+znP1hDkY
+         J5+B7ZSLWaHtMi3yFHrhhnheoyc3cNz+hPkbz6pP/MfJ9rpzPFC5JpNJ8onaqZEDTmg/
+         k12Ew+OKJYWQfrTm5SipgeYjwJs+8OBeVUBk3Jgwho2sT2zlBp3K1PpBA3B5+DeNZ8q/
+         QUFw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Imvio/W5V7gZKYBPuVngDuvNwmJKZKrw/sgtdatot+Q=;
+        fh=ZGNQfTa6jmmyjwidSrR/tL++3GjpCuU7Bbogf+cqG5M=;
+        b=TI8IILPrIrbI6Lm38HlrH9Jdn/NEFIxnr0O/xhSE+PCzoyyH/8Ei+OEho3wIQqHgpg
+         j3RlzB4IZ7NssKsPNvIMh4OW5u9S25HLkVC+Grco9AHoCqydeEWwVmFuyMp9rOxxA67F
+         w1xhE7gEQnXVV2bcGS7MLNXmrPo9csHJjlijIwJ87BrmCA7zIst8SG5XSN1fxg5F2wUH
+         fV2SZVQQUZSKp8HzpwRFvOs8xPajpnlMNozHep2RJfya+juHmKF3HmPbnGfire8hYYRj
+         zfPrCUn9YzIHstu7M+QQMIsNDF3/tz9fU5SX9RnZNqbRrjtecdvT2xM7PVfV0KJSI9yB
+         hk4w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="BHA6J/YD";
+       spf=pass (google.com: domain of karthieswaranm3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=karthieswaranm3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <karthieswaranm3@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-5f0993db443sor1743893a12.11.2025.04.04.23.22.08
+        for <kit27.eee044@gmail.com>
+        (Google Transport Security);
+        Fri, 04 Apr 2025 23:22:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of karthieswaranm3@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="BHA6J/YD";
+       spf=pass (google.com: domain of karthieswaranm3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=karthieswaranm3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1743834128; x=1744438928; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=Imvio/W5V7gZKYBPuVngDuvNwmJKZKrw/sgtdatot+Q=;
+        b=BHA6J/YDDH5zbWf2Jw1p+LCfh5i63ZmnxWGkaMSMYcGCsZCWNWjXwULJnmOslAXfrE
+         zEy2n4P29iVd9wC3bn/ysnYoVf4NsdgkVnV4Oy9ePimo9JGRGJ7kjX+jnztm1aTpYfe2
+         3h6bnj1IANu8VF1nQpyqLo2tmTwVxA4zZe6enfxAmIvu+H8l1mz8OdZ5tTfpUFQqpWSx
+         WWYtqvO2pf6bz9I+/h2t62miS8mRxkKf/9d1DpmfuoRqr/tSSwRi4HQomklPRIwR1c5/
+         VJOYVXEzet0S/7fVKjUwUVZWtkPtrVB14gpfdNyRkgw3RT+q/E88N87Z2DDsTdqvrmqs
+         Nw5g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1743834128; x=1744438928;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=Imvio/W5V7gZKYBPuVngDuvNwmJKZKrw/sgtdatot+Q=;
+        b=Nh/zJEs1Vewp7emKKRBCUB6A9fCMG+P7U+5GaPqJ63cD+eFtnL3NwWNQRkDJ576Clv
+         441zwYud42MJxFqc4sxB94WPHjM5Z/IPJDK9dhrSauydsPlbZUGYZ/UPtpPc/F9VuOko
+         eDGP3A4TKcm71n05zKcY0DgyeKHNtc6naObIM2xMbeAmMSR2luCiPJTwXqR5cwJa6H4I
+         46uFxaImPxd0QTsWvWRp1KEf6PGsRwvOSnGwDOrEb7Uv65SHTkkZbwcol9FnuqBwOtns
+         s7qCNE09sdJBtzOADAFqiLTwE/yjq5j0ox9+WAO5BfoX4NxtGvhl5ctqnr4RFsM8fNZt
+         6G7Q==
+X-Gm-Message-State: AOJu0YydamdwQ01RDT9q2e1PG8DDlXmjT2lKE0r+GwFMD6KH1+o0UaNt
+	GfgC3GSslyzBdBE8wF+0wubmyed1ua0c5QA2dVpGsSKtK9c2XZX2etm/s/HtX+3sjC8mumdegbl
+	4KOONq0642OQ4ETXnc4Rs+9uqgUTun3QJHm0=
+X-Gm-Gg: ASbGncskELo+2hZNiAxJsiFF403qUKfN/SJndGUAEOgy+ozyadXG/qzYSwt6fsTTjtM
+	/3BbDnVT5WtvYGLqHNdQxCVEIAPP2zzzX9Q6vHa59AP98/TZQ7DF4VsXPgo7iUELE9nkoQCArwL
+	rQLdi+Z6/TgFG3I8F7gJjAJcF9VMDl
+X-Google-Smtp-Source: AGHT+IGjx0I0S+I6xgKO9LL32bWD4D5y1VHxV3qstdta7qInVkPqudgRbx//kKQjW5BDUFFweZI5emW1IiC4UgWTwNc=
+X-Received: by 2002:a05:6402:34d4:b0:5e7:f707:d7c4 with SMTP id
+ 4fb4d7f45d1cf-5f0b66315b8mr4372206a12.31.1743834127694; Fri, 04 Apr 2025
+ 23:22:07 -0700 (PDT)
+MIME-Version: 1.0
+From: "M. Karthieswaran" <karthieswaranm3@gmail.com>
+Date: Sat, 5 Apr 2025 11:51:55 +0530
+X-Gm-Features: ATxdqUHPAg1kj4q7HES1vrf2aMsfixUi3CsQEIpm9dSxHJN2lZ4mkmDioZtXCi8
+Message-ID: <CAC18yhf9DE52KTkJKpNEs+igyMZTrof9iQ=cxExJ2V_DKz2LFw@mail.gmail.com>
+Subject: styles.css
+To: "kit27.eee044@gmail.com" <kit27.eee044@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000ba83f90632020589"
+
+--000000000000ba83f90632020589
+Content-Type: text/plain; charset="UTF-8"
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+#app {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+input[type="text"], input[type="file"] {
+    padding: 10px;
+    margin: 10px;
+}
+
+#results {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+--000000000000ba83f90632020589
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div style=3D"color:rgb(204,204,204);background-color:rgb(=
+31,31,31);font-family:Consolas,&quot;Courier New&quot;,monospace;font-size:=
+14px;line-height:19px;white-space:pre"><div><span style=3D"color:rgb(215,18=
+6,125)">body</span> {</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,=
+220,254)">font-family</span>: <span style=3D"color:rgb(206,145,120)">Arial<=
+/span>, <span style=3D"color:rgb(206,145,120)">sans-serif</span>;</div><div=
+>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)">margin</span>: <span =
+style=3D"color:rgb(181,206,168)">0</span>;</div><div>=C2=A0 =C2=A0 <span st=
+yle=3D"color:rgb(156,220,254)">padding</span>: <span style=3D"color:rgb(181=
+,206,168)">0</span>;</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,2=
+20,254)">text-align</span>: <span style=3D"color:rgb(206,145,120)">center</=
+span>;</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)">backg=
+round-color</span>: <span style=3D"color:rgb(206,145,120)">#f4f4f9</span>;<=
+/div><div>}</div><br><div><span style=3D"color:rgb(215,186,125)">#app</span=
+> {</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)">max-widt=
+h</span>: <span style=3D"color:rgb(181,206,168)">800px</span>;</div><div>=
+=C2=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)">margin</span>: <span s=
+tyle=3D"color:rgb(181,206,168)">50px</span> <span style=3D"color:rgb(206,14=
+5,120)">auto</span>;</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,2=
+20,254)">padding</span>: <span style=3D"color:rgb(181,206,168)">20px</span>=
+;</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)">background=
+</span>: <span style=3D"color:rgb(206,145,120)">white</span>;</div><div>=C2=
+=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)">box-shadow</span>: <span =
+style=3D"color:rgb(181,206,168)">0px</span> <span style=3D"color:rgb(181,20=
+6,168)">2px</span> <span style=3D"color:rgb(181,206,168)">8px</span> <span =
+style=3D"color:rgb(220,220,170)">rgba</span>(<span style=3D"color:rgb(181,2=
+06,168)">0</span>, <span style=3D"color:rgb(181,206,168)">0</span>, <span s=
+tyle=3D"color:rgb(181,206,168)">0</span>, <span style=3D"color:rgb(181,206,=
+168)">0.1</span>);</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,220=
+,254)">border-radius</span>: <span style=3D"color:rgb(181,206,168)">8px</sp=
+an>;</div><div>}</div><br><div><span style=3D"color:rgb(215,186,125)">input=
+</span>[<span style=3D"color:rgb(156,220,254)">type</span><span style=3D"co=
+lor:rgb(212,212,212)">=3D</span><span style=3D"color:rgb(206,145,120)">&quo=
+t;text&quot;</span>], <span style=3D"color:rgb(215,186,125)">input</span>[<=
+span style=3D"color:rgb(156,220,254)">type</span><span style=3D"color:rgb(2=
+12,212,212)">=3D</span><span style=3D"color:rgb(206,145,120)">&quot;file&qu=
+ot;</span>] {</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)=
+">padding</span>: <span style=3D"color:rgb(181,206,168)">10px</span>;</div>=
+<div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)">margin</span>: <s=
+pan style=3D"color:rgb(181,206,168)">10px</span>;</div><div>}</div><br><div=
+><span style=3D"color:rgb(215,186,125)">#results</span> {</div><div>=C2=A0 =
+=C2=A0 <span style=3D"color:rgb(156,220,254)">margin-top</span>: <span styl=
+e=3D"color:rgb(181,206,168)">20px</span>;</div><div>=C2=A0 =C2=A0 <span sty=
+le=3D"color:rgb(156,220,254)">display</span>: <span style=3D"color:rgb(206,=
+145,120)">grid</span>;</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156=
+,220,254)">grid-template-columns</span>: <span style=3D"color:rgb(220,220,1=
+70)">repeat</span>(<span style=3D"color:rgb(206,145,120)">auto-fill</span>,=
+ <span style=3D"color:rgb(220,220,170)">minmax</span>(<span style=3D"color:=
+rgb(181,206,168)">200px</span>, <span style=3D"color:rgb(181,206,168)">1fr<=
+/span>));</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)">ga=
+p</span>: <span style=3D"color:rgb(181,206,168)">10px</span>;</div><div>}</=
+div><div><span style=3D"color:rgb(215,186,125)">img</span> {</div><div>=C2=
+=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)">width</span>: <span style=
+=3D"color:rgb(181,206,168)">100%</span>;</div><div>=C2=A0 =C2=A0 <span styl=
+e=3D"color:rgb(156,220,254)">height</span>: <span style=3D"color:rgb(206,14=
+5,120)">auto</span>;</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(156,2=
+20,254)">border-radius</span>: <span style=3D"color:rgb(181,206,168)">5px</=
+span>;</div><div>}</div></div></div>
+
+--000000000000ba83f90632020589--
